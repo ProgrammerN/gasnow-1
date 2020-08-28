@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NotificationVC-->
+        <scene sceneID="DN1-T5-msf">
+            <objects>
+                <viewController storyboardIdentifier="NotificationVC" id="l9p-36-P9S" customClass="NotificationVC" customModule="GasnOw" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h6Y-vl-0d3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Feu-sL-s0r" customClass="NavigationBar" customModule="GasnOw" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="75" id="TJy-n8-LEY"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="e6N-HH-BNV"/>
+                                    <constraint firstAttribute="height" constant="75" id="rVl-GD-hjZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Feu-sL-s0r" firstAttribute="trailing" secondItem="cBN-4C-QyM" secondAttribute="trailing" id="KFf-pd-kyB"/>
+                            <constraint firstItem="Feu-sL-s0r" firstAttribute="top" secondItem="h6Y-vl-0d3" secondAttribute="top" id="R4I-SS-zGW"/>
+                            <constraint firstItem="Feu-sL-s0r" firstAttribute="leading" secondItem="cBN-4C-QyM" secondAttribute="leading" id="lId-Sl-ve5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cBN-4C-QyM"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TDf-hg-DVa"/>
+                    <connections>
+                        <outlet property="headerView" destination="Feu-sL-s0r" id="9Kr-pK-Umx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QbS-r5-2p6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="368.11594202898556" y="174.77678571428569"/>
+        </scene>
+        <!--Notifications-->
+        <scene sceneID="ZAw-rU-wVI">
+            <objects>
+                <navigationController storyboardIdentifier="NotificationNavigationController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="uFS-Y5-LRk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notifications" image="bell.fill" catalog="system" landscapeImage="bell.fill" largeContentSizeImage="bell.fill" id="6Nl-Z2-YqM"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1FT-f7-XiJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="l9p-36-P9S" kind="relationship" relationship="rootViewController" id="NO5-u4-yTD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rid-kG-XuM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-542.02898550724638" y="174.77678571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bell.fill" catalog="system" width="64" height="62"/>
+    </resources>
+</document>
